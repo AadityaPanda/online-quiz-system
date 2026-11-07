@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile — Online Quiz</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header class="topbar">
+        <a class="brand" href="index.html">Online Quiz</a>
+        <nav></nav>
+        <div class="who"><span data-user-name></span><button type="button" class="link" data-logout>Log out</button></div>
+    </header>
+
+    <main class="container narrow">
+        <div class="page-head"><h1>Profile</h1><span class="muted" id="member-since"></span></div>
+
+        <section class="card">
+            <h2>Your details</h2>
+            <p id="details-message" class="message" role="alert" hidden></p>
+            <form id="details-form" class="stack">
+                <label>Name <input type="text" name="name" maxlength="60" autocomplete="name" required></label>
+                <label>Email <input type="email" name="email" autocomplete="email" required></label>
+                <button type="submit" class="btn primary">Save details</button>
+            </form>
+        </section>
+
+        <section class="card">
+            <h2>Change password</h2>
+            <p id="password-message" class="message" role="alert" hidden></p>
+            <form id="password-form" class="stack">
+                <label>Current password <input type="password" name="currentPassword" autocomplete="current-password" required></label>
+                <label>New password <input type="password" name="newPassword" autocomplete="new-password" minlength="6" required></label>
+                <label>Confirm new password <input type="password" name="confirmPassword" autocomplete="new-password" minlength="6" required></label>
+                <button type="submit" class="btn primary">Change password</button>
+            </form>
+        </section>
+    </main>
+    <script type="module" src="js/profile.js"></script>
+</body>
+</html>

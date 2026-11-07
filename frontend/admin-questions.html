@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Questions — Online Quiz Admin</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header class="topbar">
+        <a class="brand" href="index.html">Online Quiz</a>
+        <nav></nav>
+        <div class="who"><span data-user-name></span><button type="button" class="link" data-logout>Log out</button></div>
+    </header>
+
+    <main class="container">
+        <div class="page-head"><h1>Questions</h1></div>
+
+        <section class="card">
+            <h2 id="form-title">Add question</h2>
+            <p id="form-message" class="message" role="alert" hidden></p>
+            <form id="question-form" class="stack">
+                <label>Category <select name="category" required></select></label>
+                <label>Question <textarea name="text" rows="2" maxlength="500" required></textarea></label>
+                <fieldset class="choices">
+                    <legend>Choices (2 to 6, leave extras blank). Select the correct one.</legend>
+                    <div id="choices" class="stack"></div>
+                </fieldset>
+                <div class="form-actions">
+                    <button type="submit" class="btn primary" id="submit-btn">Add question</button>
+                    <button type="button" class="btn" id="cancel-edit" hidden>Cancel</button>
+                </div>
+            </form>
+        </section>
+
+        <section class="card">
+            <form id="filters" class="filters">
+                <label>Filter by category <select name="category"><option value="">All</option></select></label>
+            </form>
+            <p id="list-message" class="message" role="alert" hidden></p>
+            <div class="table-wrap">
+                <table>
+                    <thead>
+                        <tr><th>Question</th><th>Category</th><th>Answer</th><th><span class="sr-only">Actions</span></th></tr>
+                    </thead>
+                    <tbody id="rows"></tbody>
+                </table>
+            </div>
+        </section>
+    </main>
+    <script type="module" src="js/admin-questions.js"></script>
+</body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Leaderboard — Online Quiz</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header class="topbar">
+        <a class="brand" href="index.html">Online Quiz</a>
+        <nav></nav>
+        <div class="who"><span data-user-name></span><button type="button" class="link" data-logout>Log out</button></div>
+    </header>
+
+    <main class="container">
+        <div class="page-head"><h1>Leaderboard</h1><span class="muted">Total correct answers across all quizzes</span></div>
+        <p id="message" class="message" role="alert" hidden></p>
+        <section class="card">
+            <div class="table-wrap">
+                <table>
+                    <thead>
+                        <tr><th>#</th><th>Player</th><th class="num">Quizzes</th><th class="num">Correct</th><th class="num">Accuracy</th></tr>
+                    </thead>
+                    <tbody id="rows"></tbody>
+                </table>
+            </div>
+        </section>
+    </main>
+    <script type="module" src="js/leaderboard.js"></script>
+</body>
+</html>

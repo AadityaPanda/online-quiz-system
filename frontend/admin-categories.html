@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Categories — Online Quiz Admin</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header class="topbar">
+        <a class="brand" href="index.html">Online Quiz</a>
+        <nav></nav>
+        <div class="who"><span data-user-name></span><button type="button" class="link" data-logout>Log out</button></div>
+    </header>
+
+    <main class="container">
+        <div class="page-head"><h1>Quiz categories</h1></div>
+
+        <section class="card">
+            <h2 id="form-title">Add category</h2>
+            <p id="form-message" class="message" role="alert" hidden></p>
+            <form id="category-form" class="form-grid">
+                <label>Name <input type="text" name="name" maxlength="60" required></label>
+                <label class="span-3">Description <input type="text" name="description" maxlength="300" placeholder="Optional"></label>
+                <div class="form-actions">
+                    <button type="submit" class="btn primary" id="submit-btn">Add category</button>
+                    <button type="button" class="btn" id="cancel-edit" hidden>Cancel</button>
+                </div>
+            </form>
+        </section>
+
+        <section class="card">
+            <p id="list-message" class="message" role="alert" hidden></p>
+            <div class="table-wrap">
+                <table>
+                    <thead>
+                        <tr><th>Name</th><th>Description</th><th class="num">Questions</th><th><span class="sr-only">Actions</span></th></tr>
+                    </thead>
+                    <tbody id="rows"></tbody>
+                </table>
+            </div>
+        </section>
+    </main>
+    <script type="module" src="js/admin-categories.js"></script>
+</body>
+</html>

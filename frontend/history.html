@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>History — Online Quiz</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header class="topbar">
+        <a class="brand" href="index.html">Online Quiz</a>
+        <nav></nav>
+        <div class="who"><span data-user-name></span><button type="button" class="link" data-logout>Log out</button></div>
+    </header>
+
+    <main class="container">
+        <div class="page-head"><h1>Quiz history</h1></div>
+        <p id="message" class="message" role="alert" hidden></p>
+
+        <div class="stats">
+            <section class="card stat"><span class="stat-label">Quizzes taken</span><strong id="stat-count">0</strong></section>
+            <section class="card stat"><span class="stat-label">Average score</span><strong id="stat-average">0%</strong></section>
+            <section class="card stat"><span class="stat-label">Best score</span><strong id="stat-best">0%</strong></section>
+        </div>
+
+        <section class="card">
+            <div class="table-wrap">
+                <table>
+                    <thead>
+                        <tr><th>Date</th><th>Category</th><th class="num">Score</th><th class="num">%</th><th><span class="sr-only">Actions</span></th></tr>
+                    </thead>
+                    <tbody id="result-rows"></tbody>
+                </table>
+            </div>
+        </section>
+
+        <section class="card" id="review" hidden>
+            <h2 id="review-title"></h2>
+            <ol id="review-list" class="quiz-list"></ol>
+        </section>
+    </main>
+    <script type="module" src="js/history.js"></script>
+</body>
+</html>

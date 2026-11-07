@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz — Online Quiz</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header class="topbar">
+        <a class="brand" href="index.html">Online Quiz</a>
+        <nav></nav>
+        <div class="who"><span data-user-name></span><button type="button" class="link" data-logout>Log out</button></div>
+    </header>
+
+    <main class="container narrow">
+        <div class="page-head"><h1 id="quiz-title">Quiz</h1></div>
+        <p id="message" class="message" role="alert" hidden></p>
+
+        <form id="quiz-form" class="card stack" hidden>
+            <ol id="quiz-questions" class="quiz-list"></ol>
+            <button type="submit" class="btn primary">Submit quiz</button>
+        </form>
+
+        <section id="quiz-result" class="stack" hidden>
+            <div class="card">
+                <h2>Your score</h2>
+                <div class="score" id="result-score"></div>
+                <p class="muted" id="result-percent"></p>
+                <div class="form-actions">
+                    <a class="btn primary" id="retake">Take it again</a>
+                    <a class="btn" href="quizzes.html">All quizzes</a>
+                </div>
+            </div>
+            <div class="card">
+                <h2>Review</h2>
+                <ol id="result-review" class="quiz-list"></ol>
+            </div>
+        </section>
+    </main>
+    <script type="module" src="js/quiz.js"></script>
+</body>
+</html>
